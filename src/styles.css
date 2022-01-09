@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.home {
+  background-color: aliceblue;
+  margin: 8px 8px 8px 8px;
+}
+.videoBack {
+  background-color: black;
+  margin: 8px 8px 8px 8px;
+  border-radius: 0.5rem;
+}
+.logo {
+  color: red;
+}

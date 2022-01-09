@@ -8,8 +8,8 @@
     (navChange)="onNavChange($event)"
   >
     <li *ngFor="let item of tabs" [ngbNavItem]="item.name">
-      <a style="width: 18rem" ngbNavLink>
-        <span style="font-weight: bold"> {{ item.name }}</span>
+      <a class="liLinks" ngbNavLink>
+        <span class="bold"> {{ item.name }}</span>
         <p>{{ item.summary }}</p>
       </a>
       <ng-template ngbNavContent>
