@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row" *ngFor="let res of updatedResources">
+    <h3>{{ res.name }}</h3>
+    <div
+      class="col-sm-4"
+      *ngFor="let cards of res.items"
+      style="margin-top: 8px"
+    >
+      <div class="card" style="width: 16rem">
+        <div class="card-body">
+          <img
+            src="../../../assets/pdflogo.jpg"
+            class="card-img-top"
+            alt="pdflogo"
+          />
+        </div>
+        <div class="card-footer bg-transparent border-success">
+          {{ cards?.title }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

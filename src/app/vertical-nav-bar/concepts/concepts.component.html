@@ -1,0 +1,20 @@
+<div class="container">
+  <!-- Adding dynamic rows with headings and dynamic colums -->
+  <div class="row" *ngFor="let item of updatedConceptList">
+    <h3>{{ item.name }}</h3>
+    <div
+      class="col-sm-4"
+      *ngFor="let cards of item.items"
+      style="margin-top: 8px"
+    >
+      <div class="card mb-3" style="max-width: 18rem">
+        <div class="card-body">
+          <img src="../../../assets/video.png" class="card-img" alt="video" />
+          <div class="card-footer bg-transparent border-success">
+            {{ cards?.title }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

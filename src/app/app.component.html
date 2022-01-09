@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="container">
+    <h2>Logo</h2>
+  </div>
+  <hr />
+  <div class="container">
+    <app-top-nav-bar (getSelectedTabId)="selectedTab($event)"></app-top-nav-bar>
+  </div>
+  <!--  -->
+  <div class="container-fluid" style="margin-top: 8px; background-color: black">
+    <app-video-player></app-video-player>
+  </div>
+
+  <!-- end of video column -->
+  <div class="container-fluid" style="margin-top: 8px">
+    <app-vertical-nav-bar [verticalTabData]="tabData"></app-vertical-nav-bar>
+  </div>
+  <app-footer></app-footer>
+</div>

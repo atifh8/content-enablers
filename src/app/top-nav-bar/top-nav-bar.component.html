@@ -1,0 +1,13 @@
+<ul
+  ngbNav
+  #nav="ngbNav"
+  [(activeId)]="active"
+  class="nav nav-pills"
+  (navChange)="onNavChange($event)"
+>
+  <li *ngFor="let id of tabs" [ngbNavItem]="id">
+    <a ngbNavLink>
+      {{ id }}
+    </a>
+  </li>
+</ul>

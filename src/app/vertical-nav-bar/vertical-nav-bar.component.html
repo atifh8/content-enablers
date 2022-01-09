@@ -1,0 +1,35 @@
+<div class="d-flex">
+  <ul
+    ngbNav
+    #nav="ngbNav"
+    [(activeId)]="active"
+    class="nav-pills"
+    orientation="vertical"
+    (navChange)="onNavChange($event)"
+  >
+    <li *ngFor="let item of tabs" [ngbNavItem]="item.name">
+      <a style="width: 18rem" ngbNavLink>
+        <span style="font-weight: bold"> {{ item.name }}</span>
+        <p>{{ item.summary }}</p>
+      </a>
+      <ng-template ngbNavContent>
+        <app-concepts
+          [conceptList]="item?.list"
+          *ngIf="selectedTab === 'Concepts'"
+        >
+        </app-concepts>
+        <app-resources
+          *ngIf="selectedTab === 'Resources'"
+          [receivedResourses]="item?.list"
+        >
+        </app-resources>
+        <app-scenarios
+          [scenarios]="item.list"
+          *ngIf="selectedTab === 'Scenarios'"
+        ></app-scenarios>
+      </ng-template>
+    </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="ml-4"></div>
+</div>
